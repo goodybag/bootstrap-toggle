@@ -200,7 +200,7 @@
   content: attr(data-disabled);
 }
 
-.check {
+.toggle .check {
   display: block;
   width: 65px;
   height: 25px;
@@ -221,17 +221,17 @@
   left: -1px;
 }
 
-input[type=checkbox] { 
+.toggle input[type=checkbox] { 
   display: none 
 }
 
-input[type=checkbox]:checked+label.check {
+.toggle input[type=checkbox]:checked + label.check {
   top: -1px;
   left: 74px;
   -webkit-box-shadow: rgba(0,0,0,0.05) -1px 0 2px;
 }
 
-input[type=checkbox]+label.check {
+.toggle input[type=checkbox] + label.check {
   top: -1px;
   left: -1px;
   -webkit-box-shadow: rgba(0,0,0,0.05) 1px 0 2px;
