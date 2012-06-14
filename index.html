@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap Toggles, from Nijiko Yonskai</title>
+    <title>Twitter Bootstrap Toggles, from Nijiko Yonskai</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Toggle buttons for bootstrap">
+    <meta name="description" content="Toggle buttons for twitter bootstrap">
     <meta name="author" content="Nijiko Yonskai">
 
     <!-- Le styles -->
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/bootstrap-toggle.css" rel="stylesheet">
@@ -39,13 +40,13 @@
         </div>
         <div class="span9">
           <div class='page-header'>
-            <h1>Bootstrap Toggle Switches</h1>
+            <h1>Twitter Bootstrap Extensions: Toggle Switches</h1>
           </div>
 
-          <p>Introducing... Toggle Switches for Bootstrap!? Yes, toggle switches. Like those fancy pants iphone users have and styled in a bootstrap manner with some fancy css and javascript:</p>
+          <p>Introducing... Toggle Switches for Twitter Bootstrap!? Yes, toggle switches. Like those fancy pants iphone users have and styled in a bootstrap manner with some fancy css and javascript:</p>
 
           <h4>Html:</h4>
-<pre>
+<pre class='prettyprint'>
   &lt;div class='toggle basic' data-enabled="ON" data-disabled="OFF" data-toggle="toggle">
     &lt;input type="checkbox" value="1" name="myCheckbox" class="checkbox" checked="checked" />
     &lt;label class="check" for="myCheckbox">&lt;/label>
@@ -53,7 +54,7 @@
 </pre>
 
           <h4>Js:</h4>
-<pre>
+<pre class='prettyprint'>
   &lt;script>
     // Don't use .toggle, it will be global.
     $('.basic').toggle({
@@ -77,6 +78,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
     <script src="js/bootstrap-toggle.js"></script>
     <script>
       // Basic Features, style isn't even required.
