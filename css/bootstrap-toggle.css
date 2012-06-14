@@ -225,6 +225,10 @@
   left: -1px;
 }
 
+.toggle .check:hover {
+  cursor: pointer;
+}
+
 .toggle input[type=checkbox] { 
   display: none 
 }
