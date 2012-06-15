@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter Bootstrap Toggles, from Nijiko Yonskai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Toggle buttons for twitter bootstrap">
+    <meta name="author" content="Nijiko Yonskai">
+
+    <!-- Le styles -->
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/bootstrap-toggle-animated.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+          <div class="span12">&nbsp;</div>
+          
+          <div class="span12">
+            <a href="https://github.com/Nijikokun/bootstrap-toggle" class='btn'>Fork On Github</a>
+          </div>
+          
+          <div class="span12">&nbsp;</div>
+          
+          <div class="span12">
+            <a href="http://nijikokun.github.com/bootstrap-toggle/index.html">View Non-Animated Toggle Switches</a>
+          </div>
+          
+          <div class="span12">&nbsp;</div>
+          
+          <div class='toggle basic' data-enabled="ON" data-disabled="OFF" data-toggle="toggle">
+            <input type="checkbox" value="1" name="myCheckbox" class="checkbox" checked="checked" />
+            <label class="check" for="myCheckbox"></label>
+          </div>
+          
+          <div class="span12">&nbsp;</div>
+          
+          <div class='toggle alternative' data-enabled="ON" data-disabled="OFF" data-toggle="toggle">
+            <input type="checkbox" value="1" name="myCheckbox" class="checkbox" checked="checked" />
+            <label class="check" for="myCheckbox"></label>
+          </div>
+        </div>
+        <div class="span9">
+          <div class='page-header'>
+            <h1>Twitter Bootstrap Extensions: Toggle Switches</h1>
+          </div>
+
+          <p>Introducing... Toggle Switches for Twitter Bootstrap!? Yes, toggle switches. Like those fancy pants iphone users have and styled in a bootstrap manner with some fancy css and javascript:</p>
+
+          <h4>Html:</h4>
+<pre class='prettyprint'>
+  &lt;div class='toggle basic' data-enabled="ON" data-disabled="OFF" data-toggle="toggle">
+    &lt;input type="checkbox" value="1" name="myCheckbox" class="checkbox" checked="checked" />
+    &lt;label class="check" for="myCheckbox">&lt;/label>
+  &lt;/div>
+</pre>
+
+          <h4>Js:</h4>
+<pre class='prettyprint'>
+  &lt;script>
+    // Don't use .toggle, it will be global.
+    $('.basic').toggle({
+      onClick: function (event, status) {}, // Do something on status change if you want
+      text: {
+        enabled: false, // Change the enabled disabled text on the fly ie: 'ENABLED'
+        disabled: false // and for 'DISABLED'
+      },
+      style: {
+        enabled: 'primary' // default button styles like btn-primary, btn-info, btn-warning just remove the btn- part.
+        disabled: false // same goes for this, primary, info, warning, danger, success. 
+      }
+    });
+  &lt;/script>
+</pre>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="js/bootstrap-toggle.js"></script>
+    <script>
+      // Pretty print
+      window.prettyPrint && prettyPrint()
+      
+      // Basic Features, style isn't even required.
+      $('.basic').toggle({
+        style: {
+          enabled: 'primary'
+        }
+      });
+
+      // Showing all the features
+      $('.alternative').toggle({
+        onClick: function (evt, status) {
+          console.log('.alternative changed to: ' + status, 'the reverse of: ' + !status);
+        },
+        text: {
+          enabled: 'ENABLED',
+          disabled: 'DISABLED'
+        },
+        style: {
+          enabled: 'success',
+          disabled: 'danger'
+        }
+      });
+    </script>
+  </body>
+</html>
