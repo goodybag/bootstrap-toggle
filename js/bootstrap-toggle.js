@@ -29,17 +29,12 @@
     this.options = $.extend({}, $.fn.toggle.defaults, options)
 
     // Initial Setup from options
-    var status = this.$checkbox.is(':checked')
     if(this.options.text.enabled) this.$element.attr('data-enabled', this.options.text.enabled)
     if(this.options.text.disabled) this.$element.attr('data-disabled', this.options.text.disabled)      
 
-    if(status)
-      if(this.options.style.enabled)
-        this.$element.addClass(this.options.style.enabled)
-    else
-      if(this.options.style.disabled)
-        this.$element.addClass('disabled-' + this.options.style.disabled);
-
+    // setup state
+    this.setState(this.$checkbox.is(':checked'))
+    
     // Setup Click
     this.$element.click(function (e) {
       if(self.options.onClick) self.options.onClick(e, self.$checkbox.is(':checked'))
