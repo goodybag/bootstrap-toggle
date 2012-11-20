@@ -3,7 +3,7 @@
  * http://github.com/Nijikokun/bootstrap-toggle/
  * --
  * http://twitter.com/nijikokun
- * Copyright 2012 Nijiko Yonskai, Goodybag Inc
+ * Copyright 2012 Goodybag Inc.
  * --
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
