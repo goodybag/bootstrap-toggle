@@ -25,7 +25,7 @@
     // Collect elements
     this.$element = $(element)
     this.$checkbox = this.$element.children('.checkbox')
-    this.options = $.extend({}, $.fn.toggle.defaults, options)
+    this.options = $.extend({}, $.fn.toggleSlide.defaults, options)
 
     // Initial Setup from options
     if(this.options.text.enabled) this.$element.attr('data-enabled', this.options.text.enabled)
@@ -37,7 +37,7 @@
     // Setup Click
     this.$element.click(function (e) {
       if(self.options.onClick) self.options.onClick(e, self.$checkbox.is(':checked'))
-      self.toggle()
+      self.toggleSlide()
     });
   }
   
@@ -68,7 +68,7 @@
     this.setState(false)
   }
   
-  Toggle.prototype.toggle = function () {
+  Toggle.prototype.toggleSlide = function () {
     var status = this.$checkbox.is(':checked')
 
     // Toggle status
@@ -78,11 +78,11 @@
   /*
    * Toggle Definition
    */
-  $.fn.toggle = function (options) {
+  $.fn.toggleSlide = function (options) {
     return new Toggle(this, typeof options == 'object' ? options : {})
   }
   
-  $.fn.toggle.defaults = {
+  $.fn.toggleSlide.defaults = {
     onClick: function () {},
     text: {
       enabled: false,
@@ -94,5 +94,5 @@
     }
   }
   
-  $.fn.toggle.Constructor = Toggle
+  $.fn.toggleSlide.Constructor = Toggle
 }(window.jQuery);
