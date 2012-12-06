@@ -68,7 +68,7 @@
 <pre class='prettyprint'>
   &lt;script>
     // Don't use .toggle, it will be global.
-    $('.basic').toggle({
+    $('.basic').toggleSlide({
       onClick: function (event, status) {}, // Do something on status change if you want
       text: {
         enabled: false, // Change the enabled disabled text on the fly ie: 'ENABLED'
@@ -96,14 +96,14 @@
       window.prettyPrint && prettyPrint()
       
       // Basic Features, style isn't even required.
-      $('.basic').toggle({
+      $('.basic').toggleSlide({
         style: {
           enabled: 'primary'
         }
       });
 
       // Showing all the features
-      $('.alternative').toggle({
+      $('.alternative').toggleSlide({
         onClick: function (evt, status) {
           console.log('.alternative changed to: ' + status, 'the reverse of: ' + !status);
         },
