@@ -36,7 +36,10 @@
     
     // Setup Click
     this.$element.click(function (e) {
-      if(self.options.onClick) self.options.onClick(e, self.$checkbox.is(':checked'))
+      if(self.options.onClick) {
+        self.options.onClick(e, self.$checkbox.is(':checked'))
+        this.$checkbox.change();
+      }
       self.toggleSlide()
     });
   }
@@ -44,7 +47,6 @@
   Toggle.prototype.setState = function (state) {
     // change checkbox state
     this.$checkbox.attr('checked', state)
-    this.$checkbox.change();
     
     if(state) {
       this.$element.removeClass('disabled')
