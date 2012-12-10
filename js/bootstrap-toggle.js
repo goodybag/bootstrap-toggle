@@ -38,7 +38,7 @@
     this.$element.click(function (e) {
       if(self.options.onClick) {
         self.options.onClick(e, self.$checkbox.is(':checked'))
-        this.$checkbox.change();
+        self.$checkbox.change();
       }
       self.toggleSlide()
     });
