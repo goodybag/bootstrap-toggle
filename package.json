@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-toggle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bootstrap toggle switches - Fork it and make it better :D",
   "main": "js/bootstrap-toggle.js",
   "scripts": {
