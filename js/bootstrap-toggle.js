@@ -1,6 +1,6 @@
 /**
  * bootstrap-toggle.js v1.0
- * http://github.com/Nijikokun/bootstrap-toggle/
+ * https://github.com/goodybag/bootstrap-toggle
  * --
   * Copyright 2012 Goodybag Inc.
  * --
